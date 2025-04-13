@@ -34,16 +34,19 @@ const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-black hover:text-rise-orange transition-colors font-medium">
-              About
-            </a>
-            <a href="#features" className="text-black hover:text-rise-orange transition-colors font-medium">
+            <a href="#features" className="text-gray-700 hover:text-black transition-colors font-medium">
               Features
             </a>
-            <a href="#pricing" className="text-black hover:text-rise-orange transition-colors font-medium">
+            <a href="#use-cases" className="text-gray-700 hover:text-black transition-colors font-medium">
+              Use Cases
+            </a>
+            <a href="#pricing" className="text-gray-700 hover:text-black transition-colors font-medium">
               Pricing
             </a>
-            <Button className="bg-rise-orange hover:bg-rise-orange/90 text-white rounded-md">
+            <a href="#docs" className="text-gray-700 hover:text-black transition-colors font-medium">
+              Docs
+            </a>
+            <Button className="bg-black hover:bg-black/90 text-white rounded-md">
               Log in
             </Button>
           </div>
@@ -66,28 +69,35 @@ const Navbar = () => {
         <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-md animate-fade-in-up">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
-              href="#about" 
-              className="text-black hover:text-rise-orange transition-colors font-medium py-2 px-4"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </a>
-            <a 
               href="#features" 
-              className="text-black hover:text-rise-orange transition-colors font-medium py-2 px-4"
+              className="text-gray-700 hover:text-black transition-colors font-medium py-2 px-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
             </a>
             <a 
+              href="#use-cases" 
+              className="text-gray-700 hover:text-black transition-colors font-medium py-2 px-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Use Cases
+            </a>
+            <a 
               href="#pricing" 
-              className="text-black hover:text-rise-orange transition-colors font-medium py-2 px-4"
+              className="text-gray-700 hover:text-black transition-colors font-medium py-2 px-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Pricing
             </a>
+            <a 
+              href="#docs" 
+              className="text-gray-700 hover:text-black transition-colors font-medium py-2 px-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Docs
+            </a>
             <Button 
-              className="bg-rise-orange hover:bg-rise-orange/90 text-white w-full"
+              className="bg-black hover:bg-black/90 text-white w-full"
               onClick={() => setIsMenuOpen(false)}
             >
               Log in
