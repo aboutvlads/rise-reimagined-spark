@@ -1,10 +1,31 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 import AnimatedText from './AnimatedText';
+import { toast } from '@/components/ui/use-toast';
 
 const CallToAction = () => {
+  const handleDemoRequest = () => {
+    toast({
+      title: "Demo request received",
+      description: "Our team will contact you shortly to schedule your demo."
+    });
+  };
+
+  const handleFreeTrial = () => {
+    toast({
+      title: "Free trial initiated",
+      description: "Welcome to HEYRISE! Your free trial has begun."
+    });
+  };
+
+  const handleTalkToSales = () => {
+    toast({
+      title: "Sales contact requested",
+      description: "A member of our sales team will reach out to you soon."
+    });
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -20,7 +41,7 @@ const CallToAction = () => {
               <AnimatedText
                 text={
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Ready to grow your business?
+                    Get Started
                   </h2>
                 }
                 delay={100}
@@ -29,7 +50,7 @@ const CallToAction = () => {
               <AnimatedText
                 text={
                   <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-                    Join thousands of successful businesses that trust HeyRise to power their online growth. Get started today!
+                    Start transforming your customer relationships today.
                   </p>
                 }
                 delay={300}
@@ -38,11 +59,25 @@ const CallToAction = () => {
               <AnimatedText
                 text={
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button className="bg-white text-rise-orange hover:bg-white/90 rounded-full px-6">
+                    <Button 
+                      className="bg-white text-rise-orange hover:bg-white/90 rounded-md px-6"
+                      onClick={handleFreeTrial}
+                    >
                       Start Free Trial
                     </Button>
-                    <Button variant="outline" className="text-white border-white hover:bg-white/10 rounded-full px-6">
-                      Watch Demo
+                    <Button 
+                      variant="outline" 
+                      className="text-white border-white hover:bg-white/10 rounded-md px-6"
+                      onClick={handleDemoRequest}
+                    >
+                      Book a Demo
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      className="text-white border-white hover:bg-white/10 rounded-md px-6"
+                      onClick={handleTalkToSales}
+                    >
+                      Talk to Sales
                     </Button>
                   </div>
                 }

@@ -3,9 +3,13 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import WhyHeyRise from '@/components/WhyHeyRise';
-import Features from '@/components/Features';
+import HowItWorks from '@/components/HowItWorks';
+import KeyFeatures from '@/components/KeyFeatures';
+import WhoItsFor from '@/components/WhoItsFor';
+import Results from '@/components/Results';
+import UseCases from '@/components/UseCases';
 import Testimonials from '@/components/Testimonials';
-import PricingSection from '@/components/PricingSection';
+import Integrations from '@/components/Integrations';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 
@@ -41,9 +45,13 @@ const Index = () => {
       <main>
         <Hero />
         <WhyHeyRise />
-        <Features />
+        <HowItWorks />
+        <KeyFeatures />
+        <WhoItsFor />
+        <Results />
+        <UseCases />
         <Testimonials />
-        <PricingSection />
+        <Integrations />
         <CallToAction />
       </main>
       <Footer />

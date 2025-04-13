@@ -1,70 +1,61 @@
 
 import React from 'react';
-import TestimonialCard from './TestimonialCard';
 import AnimatedText from './AnimatedText';
 
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "HeyRise has transformed our business. The analytics tools helped us understand our customers better and increase our conversion rate by 40%.",
-      author: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "TechFlow Inc.",
+      quote: "HEYRISE helped us cut sales cycle time by 40%. Our team finally has real-time insights and conversations that convert.",
+      author: "Lea K.",
+      role: "Head of Sales",
+      company: "FinTech Brand",
       stars: 5
     },
     {
-      quote: "Setting up our online store was incredibly easy with HeyRise. Their customer support team was always available to help us through the process.",
-      author: "David Chen",
-      role: "Founder",
-      company: "Artisan Goods",
+      quote: "From onboarding to upselling, everything's more personal, and it works.",
+      author: "Jan M.",
+      role: "CX Lead",
+      company: "European eCommerce Platform",
       stars: 5
-    },
-    {
-      quote: "We've tried many platforms, but HeyRise stands out with its intuitive interface and powerful features. It's helped us scale our business globally.",
-      author: "Michael Rodriguez",
-      role: "E-commerce Manager",
-      company: "Global Retail",
-      stars: 4
-    },
+    }
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-rise-orange/5"></div>
-      <div className="absolute -bottom-20 -right-20 w-60 h-60 rounded-full bg-rise-blue/10"></div>
-      
-      <div className="container mx-auto px-4 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <AnimatedText
-            text={
-              <h2 className="text-3xl md:text-4xl font-bold text-rise-dark-blue mb-4">
-                Trusted by <span className="text-rise-orange">growing businesses</span> everywhere
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <AnimatedText
+          text={
+            <div className="text-center mb-16">
+              <span className="inline-block px-4 py-1 bg-rise-orange/10 text-rise-orange rounded-full text-sm font-medium mb-4">
+                What Our Users Say
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-rise-dark-blue">
+                Trusted by Industry Leaders
               </h2>
-            }
-            delay={100}
-          />
-          
-          <AnimatedText
-            text={
-              <p className="text-gray-600 text-lg">
-                Don't just take our word for it. See what our customers have to say about their experience with HeyRise.
-              </p>
-            }
-            delay={300}
-          />
-        </div>
+            </div>
+          }
+          delay={100}
+        />
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard
+            <AnimatedText
               key={index}
-              quote={testimonial.quote}
-              author={testimonial.author}
-              role={testimonial.role}
-              company={testimonial.company}
-              stars={testimonial.stars}
-              index={index}
+              text={
+                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.stars)].map((_, i) => (
+                      <span key={i} className="text-yellow-400">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+                  <div>
+                    <p className="font-bold text-rise-dark-blue">{testimonial.author}</p>
+                    <p className="text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+              }
+              delay={200 + index * 100}
             />
           ))}
         </div>
