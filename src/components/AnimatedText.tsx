@@ -1,9 +1,9 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
 interface AnimatedTextProps {
-  text: string;
+  text: ReactNode;
   className?: string;
   delay?: number;
   once?: boolean;

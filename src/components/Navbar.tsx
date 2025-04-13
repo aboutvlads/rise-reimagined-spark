@@ -28,25 +28,22 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div className="flex items-center gap-2">
-              <svg className="w-8 h-8 text-rise-orange" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 12h5v8h14v-8h5L12 2z" />
-              </svg>
-              <span className="text-rise-dark-blue text-2xl font-bold">HEYRISE</span>
+              <span className="text-black text-2xl font-bold">HEYRISE</span>
             </div>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-rise-dark-blue hover:text-rise-orange transition-colors font-medium">
+            <a href="#about" className="text-black hover:text-rise-orange transition-colors font-medium">
               About
             </a>
-            <a href="#features" className="text-rise-dark-blue hover:text-rise-orange transition-colors font-medium">
+            <a href="#features" className="text-black hover:text-rise-orange transition-colors font-medium">
               Features
             </a>
-            <a href="#pricing" className="text-rise-dark-blue hover:text-rise-orange transition-colors font-medium">
+            <a href="#pricing" className="text-black hover:text-rise-orange transition-colors font-medium">
               Pricing
             </a>
-            <Button className="bg-rise-orange hover:bg-rise-orange/90 text-white rounded-full px-6">
+            <Button className="bg-rise-orange hover:bg-rise-orange/90 text-white rounded-md">
               Log in
             </Button>
           </div>
@@ -70,21 +67,21 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a 
               href="#about" 
-              className="text-rise-dark-blue hover:text-rise-orange transition-colors font-medium py-2 px-4"
+              className="text-black hover:text-rise-orange transition-colors font-medium py-2 px-4"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a 
               href="#features" 
-              className="text-rise-dark-blue hover:text-rise-orange transition-colors font-medium py-2 px-4"
+              className="text-black hover:text-rise-orange transition-colors font-medium py-2 px-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
             </a>
             <a 
               href="#pricing" 
-              className="text-rise-dark-blue hover:text-rise-orange transition-colors font-medium py-2 px-4"
+              className="text-black hover:text-rise-orange transition-colors font-medium py-2 px-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Pricing
